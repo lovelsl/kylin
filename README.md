@@ -21,31 +21,41 @@
 
 	sqoop(导入数据)
 
-配置方式：
+<p>配置方式：</p><br />
 <p>	非docker</p><br />
 <p>	非cdh </p><br />
-<p>	自己准备脚本（历史数据删除脚本，数据获取脚本，快速启动脚本，开机脚本）</p> <br />
+<p>	自己准备脚本（历史数据删除脚本，数据获取脚本，快速启动脚本，开机脚本,自己处理zk,数据导入失败处理脚本）</p> <br />
 
-配置补录： <br />
+<p>配置补录： <br />
 <p>	可以正常开启和关闭 </p><br />
 <p>	对于灾难性处理方案  ---  这个就暂时不理会了</p><br />
 	
-配置问题：
+<p>配置问题：</p><br />
 <p>	gc </p> <br/>
 <p>	hbase资源分配 </ p> <br />
-	hive和mysql的定义区别
-	时间延迟
-	系统资源问题
-	（说到底虚拟机没资源，要是有资源，搭建一个TICK什么的监控资源分配，肯定是爽爆了。听说es很会抢资源，很想一起跑着试一试，哈哈哈哈）
+<p>	hive和mysql的定义区别</p> <br/>
+<p>	时间延迟</p> <br />
+<p>	系统资源问题</p> <br />
+<p>		（说到底虚拟机没资源，要是有资源，搭建一个TICK什么的监控资源分配，肯定是爽爆了。听说es很会抢资源，很想一起跑着试一试，哈哈哈哈） </p> <br />
 	
-附录：
+<p>附录：</p><br />
 <p>	建议熟悉数据库知识</p> <br />
 <p>	建议先了解下phoenix，对cube优化有帮助</p> <br />
 
 
-实际操作问题：
-	sqoop 数据问题
-	cube设计问题
+<p>实际操作问题：</p><br />
+<p>	sqoop 数据问题</p> <br />
+<p>	cube设计问题</p> <br />
+
+
+<p>语句效率</p> <br />
+<p>	mysql快速</p> <br />
+<p>	     单结构表，简单查询，索引优势.    select nid from node_file_viruses group by nid</p> <br />
+<p>	kylin快速</p> <br />
+<p>	     单结构表，复杂查询，无法直接索引.    select nid, virus_name from node_file_viruses group by nid, virus_name</p> <br />		
+
+
+
 
 
 
