@@ -21,39 +21,69 @@
 
 	sqoop(导入数据)
 
-<p>配置方式：</p><br />
-<p>	非docker</p><br />
-<p>	非cdh </p><br />
-<p>	自己准备脚本（历史数据删除脚本，数据获取脚本，快速启动脚本，开机脚本,自己处理zk,数据导入失败处理脚本）</p> <br />
-
-<p>配置补录： <br />
-<p>	可以正常开启和关闭 </p><br />
-<p>	对于灾难性处理方案  ---  这个就暂时不理会了</p><br />
-	
-<p>配置问题：</p><br />
-<p>	gc </p> <br/>
-<p>	hbase资源分配 </ p> <br />
-<p>	hive和mysql的定义区别</p> <br/>
-<p>	时间延迟</p> <br />
-<p>	系统资源问题</p> <br />
-<p>		（说到底虚拟机没资源，要是有资源，搭建一个TICK什么的监控资源分配，肯定是爽爆了。听说es很会抢资源，很想一起跑着试一试，哈哈哈哈） </p> <br />
-	
-<p>附录：</p><br />
-<p>	建议熟悉数据库知识</p> <br />
-<p>	建议先了解下phoenix，对cube优化有帮助</p> <br />
 
 
-<p>实际操作问题：</p><br />
-<p>	sqoop 数据问题</p> <br />
-<p>	cube设计问题</p> <br />
-<p>     kybot你值的拥有，一个用于优化cube设计的在线工具</p> <br />
+<h4> 配置方式： </h4>
+<ul>
+	<li>非docker</li>
+	<li>非cdh</li>
+	<li>自己准备脚本（历史数据删除脚本，数据获取脚本，快速启动脚本，开机脚本,自己处理zk,数据导入失败处理脚本）</li>
+</ul>
+<br />
+
+<h4>配置补录：  </h4>
+<ul>
+	<li> 可以正常开启和关闭</li>
+	<li>对于灾难性处理方案  ---  这个就暂时不理会了</li>
+</ul>
+<br />
+
+<h4> 配置问题： </h4>
+<ul>
+	<li>gc</li>
+	<li>hbase资源分配</li>
+	<li>hive和mysql的定义区别</li>
+	<li>时间延迟</li>
+	<li>系统资源问题</li>
+	<li>（说到底虚拟机没资源，要是有资源，搭建一个TICK什么的监控资源分配，肯定是爽爆了。听说es很会抢资源，很想一起跑着试一试，哈哈哈哈）</li>
+</ul>
+<br />
 
 
-<p>语句效率</p> <br />
-<p>	mysql快速</p> <br />
-<p>	     单结构表，简单查询，索引优势.    select nid from node_file_viruses group by nid</p> <br />
-<p>	kylin快速</p> <br />
-<p>	     单结构表，复杂查询，无法直接索引.    select nid, virus_name from node_file_viruses group by nid, virus_name</p> <br />		
+<h4> 附录： </h4>
+<ul>
+	<li>建议熟悉数据库知识</li>
+	<li>建议先了解下phoenix，对cube优化有帮助</li>
+</ul>
+<br />
+
+<h4> 实际操作问题： </h4>
+<ul>
+	<li>sqoop 数据问题</li>
+	<li>cube设计问题</li>
+	<li> kybot你值的拥有，一个用于优化cube设计的在线工具</li>
+</ul>
+<br />
+
+<h4> 语句效率 </h4>
+<ul>
+	<li>mysql快速</li>
+			<p>
+				单结构表，简单查询，索引优势.    select nid from node_file_viruses group by nid
+			</p>
+	<li>kylin快速</li>
+			<p>
+				单结构表，复杂查询，无法直接索引.    select nid, virus_name from node_file_viruses group by nid, virus_name
+			</p>
+</ul>
+<br />
+
+
+
+
+
+
+
 
 
 
