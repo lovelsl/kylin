@@ -46,6 +46,7 @@
 <p>实际操作问题：</p><br />
 <p>	sqoop 数据问题</p> <br />
 <p>	cube设计问题</p> <br />
+<p>     kybot你值的拥有，一个用于优化cube设计的在线工具</p> <br />
 
 
 <p>语句效率</p> <br />
@@ -53,6 +54,7 @@
 <p>	     单结构表，简单查询，索引优势.    select nid from node_file_viruses group by nid</p> <br />
 <p>	kylin快速</p> <br />
 <p>	     单结构表，复杂查询，无法直接索引.    select nid, virus_name from node_file_viruses group by nid, virus_name</p> <br />		
+
 
 
 
