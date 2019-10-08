@@ -50,7 +50,7 @@
 <br />
 
 
-<h4> 附录： </h4>
+<h4> 建议： </h4>
 <ul>
 	<li>建议熟悉数据库知识</li>
 	<li>建议先了解下phoenix，对cube优化有帮助</li>
@@ -59,7 +59,7 @@
 
 <h4> 实际操作问题： </h4>
 <ul>
-	<li>sqoop 数据问题</li>
+	<li>sqoop 数据问题.--自己创建数据库比较好，sqoop默认创建会导致date类型变成string等</li>
 	<li>cube设计问题</li>
 	<li> kybot你值的拥有，一个用于优化cube设计的在线工具</li>
 </ul>
@@ -78,6 +78,21 @@
 </ul>
 <br />
 
+<h4> 几个常用概念 </h4>
+<ul>
+	<li>cube 和 cuboid</li>
+	<li>cube的增量导入(build与merge)</li>
+	<li>HBASE表结构与kylin</li>
+</ul>
+<br />
+
+<h4> cube构建的3种途径</h4>
+<ul>
+	<li>Kylin Web</li>
+	<li>命令行工具(未使用)</li>
+	<li>RESTful API(未使用)</li>
+</ul>
+<br />
 
 
 
